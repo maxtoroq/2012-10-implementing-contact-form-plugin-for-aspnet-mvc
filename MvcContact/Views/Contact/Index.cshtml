@@ -1,0 +1,9 @@
+﻿@model MvcContact.IndexViewModel
+@{ var inputHtml = Model.HtmlHelperForInput(Html); }
+
+<form method="post">
+   @Html.AntiForgeryToken()
+   @inputHtml.EditorForModel()
+
+   <input type="submit" />
+</form>
